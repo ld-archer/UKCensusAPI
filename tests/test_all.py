@@ -8,7 +8,7 @@ import pytest
 
 from ukcensusapi import Nomisweb as Api_EW, NRScotland as Api_SC, NISRA as Api_NI, Query as Census
 
-CACHE_DIR = "/tmp/UKCensusAPI"
+CACHE_DIR = "../cache/"
 
 @pytest.fixture(scope='session')
 def api_ew(): return Api_EW.Nomisweb(CACHE_DIR, verbose=True)

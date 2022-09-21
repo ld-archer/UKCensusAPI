@@ -33,7 +33,7 @@ def init_cache_dir(directory):
 
 def check_online(url, t=5):
   try:
-    headers = {'User-Agent': 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:92.0) Gecko/20100101 Firefox/92.0'}
+    headers = {'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64; rv:105.0) Gecko/20100101 Firefox/105.0'}
     r = requests.get(url, timeout=t, headers=headers)
     r.raise_for_status()
     return True
