@@ -5,7 +5,7 @@
 
 import ukcensusapi.NRScotland as NRScotland
 
-census = NRScotland.NRScotland("~/.ukpopulation/cache")
+census = NRScotland.NRScotland("../../cache")
 
 meta = census.get_metadata("KS401SC", "LAD")
 print(meta)
