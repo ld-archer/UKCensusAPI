@@ -6,6 +6,10 @@ def readme():
   with open('README.md') as f:
     return f.read()
 
+def read_reqs():
+ with open('requirements.txt') as f:
+   return [pkg.rstrip('\n') for pkg in f]
+
 setuptools.setup(name='ukcensusapi',
   version='1.1.6',
   description='UK census data query automation',
@@ -15,11 +19,7 @@ setuptools.setup(name='ukcensusapi',
   author='Andrew P Smith',
   author_email='a.p.smith@leeds.ac.uk',
   packages=setuptools.find_packages(),
-  install_requires=['numpy',
-                    'pandas',
-                    'requests',
-                    'openpyxl',
-                    'xlrd'],
+  install_requires=read_reqs(),
   classifiers=(
     "Programming Language :: Python :: 3",
     "License :: OSI Approved :: MIT License",
